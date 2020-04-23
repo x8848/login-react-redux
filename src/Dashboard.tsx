@@ -13,7 +13,7 @@ const Dashboard = ({ logout, user }) => {
         <BrowserRouter>
             <div className="nav">
                 <label>Dashboard</label>
-                <label className="user">{user.name}</label>
+                <label className="user">{user?.name}</label>
                 <label onClick={() => logout()} className='logout'>Logout</label>
             </div>
             <div className="row">
