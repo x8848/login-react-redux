@@ -1,6 +1,7 @@
 ## Install & Start
 
 ```bash
-npm install
-npm start
+yarn install
+yarn build
+yarn start
 ```
