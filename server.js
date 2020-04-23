@@ -10,7 +10,9 @@ app.use(cors())
 app.use(express.static("build"))
 app.use(bodyParser.json())
 
-app.get('/', function (req, res) { res.sendFile(path.join('build', 'index.html')) })
+app.get('*', function (req, res) { res.redirect('/') })
+
+app.get('/', function (req, res) { res.sendFile(path.join(__dirname, 'build', 'index.html')) })
 
 app.post('/login', function (req, res) {
     let token = jwt.sign({ name: req.name }, JWT_SECRET, { expiresIn: '1h' })
